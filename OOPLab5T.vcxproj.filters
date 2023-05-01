@@ -21,7 +21,7 @@
     <ClCompile Include="Dot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Comp.cpp">
+    <ClCompile Include="Computer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="People.cpp">
@@ -32,7 +32,7 @@
     <ClInclude Include="Dot.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Comp.h">
+    <ClInclude Include="Computer.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="People.h">

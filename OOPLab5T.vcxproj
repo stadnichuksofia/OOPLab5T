@@ -127,13 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Comp.cpp" />
+    <ClCompile Include="Computer.cpp" />
     <ClCompile Include="Dot.cpp" />
     <ClCompile Include="OOPLab5T.cpp" />
     <ClCompile Include="People.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Comp.h" />
+    <ClInclude Include="Computer.h" />
     <ClInclude Include="Dot.h" />
     <ClInclude Include="People.h" />
   </ItemGroup>

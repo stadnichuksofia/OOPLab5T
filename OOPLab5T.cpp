@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include "Dot.h"
-#include "Comp.h"
+#include "Computer.h"
 #include "People.h"
 using namespace std;
 
@@ -66,9 +66,13 @@ void Task1()
     } while (select != 0);
 }
 void Task2()
+//2.10.
+//Створити клас процесор, що має потужність(Мгц). Визначити конструктори й метод доступу.
+//Створити клас комп'ютер, що містить клас процесор. Додатково є марка (вказівник на рядок), ціна. Визначити конструктори й деструктор.
+//Визначити private-, public- похідний клас комп'ютерів з монітором розмір, що має додатково, монітора.Визначить конструктори, деструктори й функцію друку.
 {
-    TProcessor proc(3000);
-    TDesktopComputer desComp("Dell", 1500, proc, 27);
+    CppProcessor proc(3000);
+    CppDesktopComputer desComp("Dell", 1500, proc, 27);
 
     desComp.PrintAll();
 }
