@@ -2,7 +2,7 @@
 
 #include <iostream>
 using namespace std;
-class TPerson
+class CppPerson
 {
 protected:
 	string firstname;
@@ -11,27 +11,27 @@ protected:
 	int height;
 	double weight;
 public:
-	TPerson();
-	TPerson(const TPerson& per);
-	~TPerson();
+	CppPerson();
+	CppPerson(const CppPerson& per);
+	~CppPerson();
 
-	TPerson operator=(const TPerson& per);
+	CppPerson operator=(const CppPerson& per);
 
-	friend istream& operator>>(istream& is, TPerson& per);
-	friend ostream& operator<<(ostream& os, const TPerson& per);
+	friend istream& operator>>(istream& is, CppPerson& per);
+	friend ostream& operator<<(ostream& os, const CppPerson& per);
 };
 
-class TEmployee : public TPerson
+class CppEmployee : public CppPerson
 {
 private:
 	int salary;
 public:
-	TEmployee();
-	TEmployee(const TEmployee& emp);
-	~TEmployee();
+	CppEmployee();
+	CppEmployee(const CppEmployee& emp);
+	~CppEmployee();
 
-	TEmployee operator=(const TEmployee& emp);
+	CppEmployee operator=(const CppEmployee& emp);
 
-	friend istream& operator>>(istream& is, TEmployee& emp);
-	friend ostream& operator<<(ostream& os, const TEmployee& emp);
+	friend istream& operator>>(istream& is, CppEmployee& emp);
+	friend ostream& operator<<(ostream& os, const CppEmployee& emp);
 };

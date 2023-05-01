@@ -88,13 +88,15 @@ void Task2()
     desComp.PrintAll();
 }
 void Task3()
+//3.10.Створити ієрархію класів людей і службовець. 
+//Перевизначити вивід у потік і введення з потоку, конструктор копіювання, оператор присвоювання через відповідні функції базового класу.
 {
-    TPerson person;
-    TEmployee employee, employee2;
+    CppPerson person;
+    CppEmployee employee, employee2;
     int select = 0;
     do
     {
-        cout << '\t' << '\t' << '\t' << "Main menu" << endl;
+        cout << "Main menu" << endl;
         cout << "1. Cin info" << endl;
         cout << "2. Cout info" << endl;
         cout << "3. Copy" << endl;
@@ -119,7 +121,7 @@ void Task3()
                 if (select == 3)
                 {
                     system("cls");
-                    TEmployee employee1 = employee;
+                    CppEmployee employee1 = employee;
                     cout << employee1;
                 }
                 else

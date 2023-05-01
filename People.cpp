@@ -1,8 +1,8 @@
 #include "People.h"
 
-TPerson::TPerson() : firstname("Bob"), lastname("Kirilyuk"), age(20), height(180), weight(70) {};
+CppPerson::CppPerson() : firstname("Bob"), lastname("Kirilyuk"), age(20), height(180), weight(70) {};
 
-TPerson::TPerson(const TPerson& per)
+CppPerson::CppPerson(const CppPerson& per)
 {
 	this->firstname = per.firstname;
 	this->lastname = per.lastname;
@@ -11,9 +11,9 @@ TPerson::TPerson(const TPerson& per)
 	this->weight = per.weight;
 }
 
-TPerson::~TPerson() {}
+CppPerson::~CppPerson() {}
 
-TPerson TPerson::operator=(const TPerson& per)
+CppPerson CppPerson::operator=(const CppPerson& per)
 {
 	this->firstname = per.firstname;
 	this->lastname = per.lastname;
@@ -23,7 +23,7 @@ TPerson TPerson::operator=(const TPerson& per)
 	return *this;
 }
 
-istream& operator>>(istream& is, TPerson& per)
+istream& operator>>(istream& is, CppPerson& per)
 {
 	is >> per.firstname;
 	is >> per.lastname;
@@ -33,7 +33,7 @@ istream& operator>>(istream& is, TPerson& per)
 	return is;
 }
 
-ostream& operator<<(ostream& os, const TPerson& per)
+ostream& operator<<(ostream& os, const CppPerson& per)
 {
 	os << "Firstname: " << per.firstname << endl;
 	os << "Lastname: " << per.lastname << endl;
@@ -43,7 +43,7 @@ ostream& operator<<(ostream& os, const TPerson& per)
 	return os;
 }
 
-istream& operator>>(istream& is, TEmployee& emp)
+istream& operator>>(istream& is, CppEmployee& emp)
 {
 	is >> emp.firstname;
 	is >> emp.lastname;
@@ -54,7 +54,7 @@ istream& operator>>(istream& is, TEmployee& emp)
 	return is;
 }
 
-ostream& operator<<(ostream& os, const TEmployee& emp)
+ostream& operator<<(ostream& os, const CppEmployee& emp)
 {
 	os << "Firstname: " << emp.firstname << endl;
 	os << "Lastname: " << emp.lastname << endl;
@@ -67,12 +67,12 @@ ostream& operator<<(ostream& os, const TEmployee& emp)
 
 
 
-TEmployee::TEmployee() : TPerson()
+CppEmployee::CppEmployee() : CppPerson()
 {
 	this->salary = 2000;
 }
 
-TEmployee::TEmployee(const TEmployee& emp)
+CppEmployee::CppEmployee(const CppEmployee& emp)
 {
 	this->firstname = emp.firstname;
 	this->lastname = emp.lastname;
@@ -82,9 +82,9 @@ TEmployee::TEmployee(const TEmployee& emp)
 	this->salary = emp.salary;
 }
 
-TEmployee::~TEmployee() {}
+CppEmployee::~CppEmployee() {}
 
-TEmployee TEmployee::operator=(const TEmployee& emp)
+CppEmployee CppEmployee::operator=(const CppEmployee& emp)
 {
 	this->firstname = emp.firstname;
 	this->lastname = emp.lastname;
