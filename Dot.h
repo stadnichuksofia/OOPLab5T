@@ -1,28 +1,28 @@
 #pragma once
 
-class TDot
+class CppDot
 {
 protected:
 	double x = 0;
 	double y = 0;
 public:
-	TDot();
-	TDot(double x);
-	TDot(double x, double y);
-	~TDot();
+	CppDot();
+	CppDot(double x);
+	CppDot(double x, double y);
+	~CppDot();
 	void PrintAll();
 };
 
-class TColorDot : TDot
+class CppColorDot : CppDot
 {
 private:
 	unsigned long color = 0;
 public:
-	TColorDot();
-	TColorDot(double x);
-	TColorDot(double x, double y);
-	TColorDot(double x, double y, unsigned long color);
-	~TColorDot();
+	CppColorDot();
+	CppColorDot(double x);
+	CppColorDot(double x, double y);
+	CppColorDot(double x, double y, unsigned long color);
+	~CppColorDot();
 
 	void SetX(double val);
 	double GetX();

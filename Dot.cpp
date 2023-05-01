@@ -3,77 +3,78 @@
 #include <iostream>
 using namespace std;
 
-TDot::TDot() {}
+CppDot::CppDot() {}
 
-TDot::TDot(double x) : x(x), y(x) {}
+CppDot::CppDot(double x) : x(x), y(x) {}
 
-TDot::TDot(double x, double y) : x(x), y(y)
+CppDot::CppDot(double x, double y) : x(x), y(y)
 {
-	/*this->x = x;
-	this->y = y;*/
+	this->x = x;
+	this->y = y;
 }
 
-TDot::~TDot() {}
+CppDot::~CppDot() {}
 
-void TDot::PrintAll()
+void CppDot::PrintAll()
 {
-	cout << "Print All:" << endl;
-	cout << "Dot x: " << this->x << endl;
-	cout << "Dot y: " << this->y << endl;
+	cout << "Print all information: " << endl;
+	cout << "Abscissa x: " << this->x << endl;
+	cout << "Ordinate y: " << this->y << endl;
 }
 
 
 
 
-TColorDot::TColorDot() {}
+CppColorDot::CppColorDot() {}
 
-TColorDot::TColorDot(double x) :TDot(x) {}
+CppColorDot::CppColorDot(double x) :CppDot(x) {}
 
-TColorDot::TColorDot(double x, double y) : TDot(x, y) {}
+CppColorDot::CppColorDot(double x, double y) : CppDot(x, y) {}
 
-TColorDot::TColorDot(double x, double y, unsigned long color) :TDot(x, y), color(color) {}
+CppColorDot::CppColorDot(double x, double y, unsigned long color) :CppDot(x, y), color(color) {}
 
-TColorDot::~TColorDot() {}
+CppColorDot::~CppColorDot() {}
 
-void TColorDot::SetX(double val)
+void CppColorDot::SetX(double val)
 {
 	this->x = val;
 }
 
-double TColorDot::GetX()
+double CppColorDot::GetX()
 {
 	return this->x;
 }
 
-void TColorDot::SetY(double val)
+void CppColorDot::SetY(double val)
 {
 	this->y = val;
 }
 
-double TColorDot::GetY()
+double CppColorDot::GetY()
 {
 	return this->y;
 }
 
-void TColorDot::SetColor(unsigned long val)
+void CppColorDot::SetColor(unsigned long val)
 {
 	this->color = val;
 }
 
-unsigned long TColorDot::GetColor()
+unsigned long CppColorDot::GetColor()
 {
 	return this->color;
 }
 
-void TColorDot::PrintCoordinates()
+void CppColorDot::PrintCoordinates()
 {
-	cout << "Dot x: " << this->x << endl;
-	cout << "Dot y: " << this->y << endl;
+	cout << "Abscissa x: " << this->x << endl;
+	cout << "Ordinate y: " << this->y << endl;
+	cout << "Dot (" << this->x << ", " << this->y << ")" << endl;
 }
 
-void TColorDot::PrintAll()
+void CppColorDot::PrintAll()
 {
-	cout << '\t' << '\t' << '\t' << "Print All: " << endl;
+	cout << "Print All: " << endl;
 	PrintCoordinates();
 	cout << "Dot color: " << this->color << endl;
 	cout << endl << endl;

@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Dot.h"
 #include "Comp.h"
 #include "People.h"
@@ -6,18 +6,23 @@ using namespace std;
 
 
 void Task1()
+//Task 1.10.
+// Створити клас точка, що має координати. Визначити конструктори, деструктор і функцію друку. Створити похідний клас - кольорова точка колір. 
+//Визначити конструктори за замовчуванням та із різним числом параметрів, деструктори, функцію друку.
+//Визначити функції перепризначення кольору й координат точки, виведення координат точки. Написати програму тестування всіх можливостей цього класу.
 {
-    TColorDot dot(3.5, 5);
+    CppColorDot dot(4.9, 7);
     int select = 0;
     do
     {
-        cout << '\t' << '\t' << '\t' << "Select option " << endl;
-        cout << "1. Set X" << endl;
-        cout << "2. Set Y" << endl;
-        cout << "3. Set color" << endl;
-        cout << "4. Print Coordinates" << endl;
-        cout << "5. Print All" << endl;
-        cout << "0. Exit" << endl;
+        cout << "Please, select the required option: " << endl;
+        cout << '\t' << endl;
+        cout << "1. Enter abscissa of dot (X): " << endl;
+        cout << "2. Enter ordinate of dot (Y): " << endl;
+        cout << "3. Enter the color code: " << endl;
+        cout << "4. Print coordinates of dot (X,Y): " << endl;
+        cout << "5. Print all information: " << endl;
+        cout << "6. Exit" << endl;
         cin >> select;
         system("cls");
 
@@ -26,27 +31,27 @@ void Task1()
         case 1:
             system("cls");
             double x;
-            cout << "Input X: ";
+            cout << "Input abscissa X: ";
             cin >> x;
             dot.SetX(x);
             break;
         case 2:
             system("cls");
             double y;
-            cout << "Input Y: ";
+            cout << "Input ordinate Y: ";
             cin >> y;
             dot.SetY(y);
             break;
         case 3:
             system("cls");
             unsigned long color;
-            cout << "Input color: ";
+            cout << "Input color code: ";
             cin >> color;
             dot.SetColor(color);
             break;
         case 4:
             system("cls");
-            cout << '\t' << '\t' << '\t' << "Print Coordinates: " << endl;
+            cout << '\t' << '\t' << '\t' << " Print coordinates of dot (X,Y): " << endl;
             dot.PrintCoordinates();
             cout << endl << endl;
             break;
@@ -119,7 +124,8 @@ void MainMenu()
     int select = 0;
     do
     {
-        cout << '\t' << '\t' << '\t' << "Main menu" << endl;
+        cout << "Main menu" << endl;
+        cout << '\t' << endl;
         cout << "1. Task 1" << endl;
         cout << "2. Task 2" << endl;
         cout << "3. Task 3" << endl;
