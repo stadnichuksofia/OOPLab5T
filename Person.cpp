@@ -1,6 +1,6 @@
-#include "People.h"
+﻿#include "Person.h"
 
-CppPerson::CppPerson() : firstname("Bob"), lastname("Kirilyuk"), age(20), height(180), weight(70) {};
+CppPerson::CppPerson() : firstname("Harry"), lastname("Styles"), age(29), height(183), weight(76) {}; 
 
 CppPerson::CppPerson(const CppPerson& per)
 {
@@ -23,7 +23,10 @@ CppPerson CppPerson::operator=(const CppPerson& per)
 	return *this;
 }
 
-istream& operator>>(istream& is, CppPerson& per)
+istream& operator>>(istream& is, CppPerson& per) //потоки вводу
+/*Визначає шаблон класу basic_istream, який медіатує вилучення для iostreams, а також шаблон класу basic_iostream, який медіатує 
+як вставки, так і вилучення. Заголовок також визначає пов'язаний маніпулятор.Цей заголовок файлу зазвичай автоматично включається
+іншим заголовком iostreams, його рідко доводиться включати безпосередньо.*/
 {
 	is >> per.firstname;
 	is >> per.lastname;
@@ -33,7 +36,9 @@ istream& operator>>(istream& is, CppPerson& per)
 	return is;
 }
 
-ostream& operator<<(ostream& os, const CppPerson& per)
+ostream& operator<<(ostream& os, const CppPerson& per) //потоки виводу
+/*Об'єкт типу ostream отримує значення різних типів,
+перетворює їх у послідовність символів і передає їх через буфер у певне місце для виведення*/
 {
 	os << "Firstname: " << per.firstname << endl;
 	os << "Lastname: " << per.lastname << endl;
@@ -69,7 +74,7 @@ ostream& operator<<(ostream& os, const CppEmployee& emp)
 
 CppEmployee::CppEmployee() : CppPerson()
 {
-	this->salary = 2000;
+	this->salary = 50000;
 }
 
 CppEmployee::CppEmployee(const CppEmployee& emp)

@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include "Dot.h"
 #include "Computer.h"
-#include "People.h"
+#include "Person.h"
 using namespace std;
 
 
@@ -92,15 +92,15 @@ void Task3()
 //Перевизначити вивід у потік і введення з потоку, конструктор копіювання, оператор присвоювання через відповідні функції базового класу.
 {
     CppPerson person;
-    CppEmployee employee, employee2;
+    CppEmployee employee, employee1, employee2;
     int select = 0;
     do
     {
         cout << "Main menu" << endl;
-        cout << "1. Cin info" << endl;
-        cout << "2. Cout info" << endl;
-        cout << "3. Copy" << endl;
-        cout << "4. Apropriation" << endl;
+        cout << "1. Enter information about the person: " << endl;
+        cout << "2. Cout information about the person: " << endl;
+        cout << "3. Copy information: " << endl;
+        cout << "4. Apropriation information: " << endl;
         cout << "0. Exit" << endl;
         cin >> select;
         system("cls");
@@ -108,7 +108,7 @@ void Task3()
         if (select == 1)
         {
             system("cls");
-            cout << "Enter info(Firstname, lastname, age, height, weight, salary)" << endl;
+            cout << "Enter information about the person (firstname, lastname, age, height, weight, salary): " << endl;
             cin >> employee;
         }
         else

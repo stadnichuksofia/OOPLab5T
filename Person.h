@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <iostream>
 using namespace std;
@@ -17,7 +17,10 @@ public:
 
 	CppPerson operator=(const CppPerson& per);
 
-	friend istream& operator>>(istream& is, CppPerson& per);
+	/*Функція friend - це функція, яка не є членом класу, але має доступ до закритих і захищених членів класу.
+	Дружні функції не вважаються членами класу; це звичайні зовнішні функції, яким надаються спеціальні права доступу*/
+
+	friend istream& operator>>(istream& is, CppPerson& per);  
 	friend ostream& operator<<(ostream& os, const CppPerson& per);
 };
 

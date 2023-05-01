@@ -130,12 +130,12 @@
     <ClCompile Include="Computer.cpp" />
     <ClCompile Include="Dot.cpp" />
     <ClCompile Include="OOPLab5T.cpp" />
-    <ClCompile Include="People.cpp" />
+    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Computer.h" />
     <ClInclude Include="Dot.h" />
-    <ClInclude Include="People.h" />
+    <ClInclude Include="Person.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

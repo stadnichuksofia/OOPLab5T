@@ -24,7 +24,7 @@
     <ClCompile Include="Computer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="People.cpp">
+    <ClCompile Include="Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClInclude Include="Computer.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="People.h">
+    <ClInclude Include="Person.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
