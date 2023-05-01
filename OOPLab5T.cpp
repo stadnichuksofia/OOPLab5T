@@ -71,8 +71,19 @@ void Task2()
 //Створити клас комп'ютер, що містить клас процесор. Додатково є марка (вказівник на рядок), ціна. Визначити конструктори й деструктор.
 //Визначити private-, public- похідний клас комп'ютерів з монітором розмір, що має додатково, монітора.Визначить конструктори, деструктори й функцію друку.
 {
-    CppProcessor proc(3000);
-    CppDesktopComputer desComp("Dell", 1500, proc, 27);
+    double power, price, diagonalSize;
+    string brand;
+    cout << "Please, select power of processor: " << endl;
+    cin >> power;
+    cout << "\nPlease, enter name of brand: " << endl;
+    cin >> brand;
+    cout << "\nPlease, enter price: " << endl;
+    cin >> price;
+    cout << "\nPlease, enter monitor size: " << endl;
+    cin >> diagonalSize;
+    cout << '\t' << endl;
+    CppProcessor proc(power);
+    CppDesktopComputer desComp(brand, price, proc, diagonalSize);
 
     desComp.PrintAll();
 }
@@ -128,6 +139,7 @@ void MainMenu()
     int select = 0;
     do
     {
+        cout << '\t' << endl;
         cout << "Main menu" << endl;
         cout << '\t' << endl;
         cout << "1. Task 1" << endl;

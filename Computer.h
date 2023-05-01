@@ -4,7 +4,7 @@ using namespace std;
 class CppProcessor
 {
 protected:
-	double power = 5; 
+	double power; 
 public:
 	CppProcessor();
 	CppProcessor(double power);
@@ -17,8 +17,8 @@ public:
 class CppComputer
 {
 protected:
-	double price = 2000;
-	string brand = "ASUS";
+	double price;
+	string brand;
 	CppProcessor processor;
 public:
 	CppComputer(string brand, double price, CppProcessor proc);
@@ -33,7 +33,7 @@ public:
 class CppDesktopComputer : public CppComputer
 {
 private:
-	int MonitorSize = 17;
+	int MonitorSize;
 public:
 	CppDesktopComputer(string brand, double price, CppProcessor proc, int ms);
 	~CppDesktopComputer();
