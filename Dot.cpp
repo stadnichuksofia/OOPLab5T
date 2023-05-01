@@ -76,6 +76,6 @@ void CppColorDot::PrintAll()
 {
 	cout << "Print All: " << endl;
 	PrintCoordinates();
-	cout << "Dot color: " << this->color << endl;
+	cout << "Dot color code: " << this->color << endl;
 	cout << endl << endl;
 }
