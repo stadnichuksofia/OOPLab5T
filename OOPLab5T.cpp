@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Dot.h"
+#include "Comp.h"
 using namespace std;
 
 
@@ -60,7 +61,10 @@ void Task1()
 }
 void Task2()
 {
-    cout << "Hello Task 2" << endl;
+    TProcessor proc(3000);
+    TDesktopComputer desComp("Dell", 1500, proc, 27);
+
+    desComp.PrintAll();
 }
 void Task3()
 {

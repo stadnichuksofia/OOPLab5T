@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Comp.cpp" />
     <ClCompile Include="Dot.cpp" />
     <ClCompile Include="OOPLab5T.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Comp.h" />
     <ClInclude Include="Dot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

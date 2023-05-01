@@ -21,9 +21,15 @@
     <ClCompile Include="Dot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Comp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dot.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Comp.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
